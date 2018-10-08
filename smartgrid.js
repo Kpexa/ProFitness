@@ -3,6 +3,6 @@ module.exports = {
     offset: "20px",
     container: {
         maxWidth: "1400px",
-        fields: "0px"
+        fields: "30px"
     }    
 };

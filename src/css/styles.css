@@ -111,8 +111,8 @@ img {
 .wrapper {
   max-width: 1400px;
   margin: 0 auto;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 body {
@@ -195,11 +195,11 @@ header .social-media .fa-facebook-f,
 header .social-media .fa-vk,
 header .social-media .fa-youtube {
   margin-right: 16px;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 header .social-media .fa-instagram {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 header .social-media .fa-facebook-f:hover,
@@ -208,7 +208,6 @@ header .social-media .fa-youtube:hover,
 header .social-media .fa-instagram:hover {
   color: #fe5621;
   cursor: pointer;
-  font-size: 19px;
 }
 
 nav {
@@ -1136,8 +1135,80 @@ footer .rights p {
 }
 
 @media screen and (max-width: 1500px) {
-  .wrapper {
-    padding: 0 30px;
+  .caption-section img {
+    max-width: 70%;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .caption-section .caption-upper-layer h1 {
+    font-size: 46px;
+  }
+
+  .caption-section .caption-upper-layer p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .caption-section img {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 1140px) {
+  header .data-group .phone,
+  header .data-group .email,
+  header .data-group .address,
+  header .data-group .schedule {
+    margin-right: 25px;
+    font-size: 12px;
+  }
+
+  header .social-media {
+    margin-left: 0;
+    font-size: 10px;
+  }
+
+  header .social-media .fa-facebook-f,
+  header .social-media .fa-vk,
+  header .social-media .fa-youtube {
+    margin-left: 0;
+    font-size: 16px;
+  }
+
+  header .social-media .fa-instagram {
+    margin-left: 0;
+    font-size: 16px;
+  }
+
+  nav .logo .first-line {
+    font-size: 20px;
+  }
+
+  nav .logo .second-line {
+    font-size: 9px;
+  }
+
+  nav .nav-links ul li {
+    padding: 15px 0;
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .services-caption {
+    padding-top: 30px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .caption-section .caption-upper-layer h1 {
+    font-size: 36px;
+  }
+
+  .caption-section .caption-upper-layer p {
+    font-size: 14px;
   }
 }
 
@@ -1145,5 +1216,90 @@ footer .rights p {
   .wrapper {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .services-caption {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 932px) {
+  header .data-group .phone,
+  header .data-group .email,
+  header .data-group .address,
+  header .data-group .schedule {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .services {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  nav .logo {
+    margin-right: 0;
+    padding: 10px 0;
+  }
+
+  nav .nav-links {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  nav .nav-links ul {
+    display: none;
+  }
+
+  .caption-section .caption-upper-layer button {
+    padding: 12px 45px 15px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+  .caption-section img {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .services-items .services-item {
+    width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .services-caption {
+    padding: 10px 0;
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .caption-section .caption-upper-layer h1 {
+    margin-top: 10%;
+    font-size: 33px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .caption-section img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .caption-section .caption-upper-layer h1 {
+    margin-top: 13%;
+    font-size: 25px;
+  }
+
+  .caption-section .caption-upper-layer p {
+    font-size: 12px;
   }
 }

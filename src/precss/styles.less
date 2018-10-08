@@ -5,10 +5,6 @@
 
 .wrapper {
   .wrapper();
-  
-  .to(1500px, {
-    padding: 0 30px;
-  })
 }
 
 body {
@@ -22,18 +18,25 @@ body {
 // -------------   HEADER   --------------
 
 header {  
-  background-color:  #171b1f; 
+  background-color: #171b1f; 
   
   .data-group {
     .flex();
     justify-content: center;   
     color:  #cecece;
     font-size: 14px;
-    padding: 15px 0;
+    padding: 15px 0;    
   
     .phone, .email, .address, .schedule {
       display: flex;
       margin-right: 45px;
+      .to(1140px, {
+        margin-right: 25px;
+        font-size: 12px;
+      });
+      .to(932px, {
+        display: none;
+      });
   
       &:hover {
         cursor: pointer;
@@ -63,20 +66,31 @@ header {
   .social-media {
     font-size: 18px;
     margin-left: auto;
+    .to(1140px, {
+      margin-left: 0;
+      font-size: 10px;
+    });
   
     .fa-facebook-f, .fa-vk, .fa-youtube {
       margin-right: 16px;
-      font-size: 16px;      
+      font-size: 18px;
+      .to(1140px, {
+      margin-left: 0;
+      font-size: 16px;
+    });      
     }
   
     .fa-instagram {
+      font-size: 18px;
+      .to(1140px, {
+      margin-left: 0;
       font-size: 16px;
+    });
     }
   
     .fa-facebook-f:hover, .fa-vk:hover, .fa-youtube:hover, .fa-instagram:hover {
       color: @orange;
-      cursor: pointer;
-      font-size: 19px;
+      cursor: pointer;      
     }
   } 
 } 
@@ -88,16 +102,24 @@ nav {
   box-sizing: border-box;
   .flex();
   justify-content: center;
-  align-items: center;
+  align-items: center;    
   
   .logo {
     margin-right: auto;
+    .to(830px, {
+      margin-right: 0;
+      padding: 10px 0;      
+    });    
 
     .first-line {
       font-size: 24px;
       font-weight: 700;  
       letter-spacing: 1px;
       color:  #212121;
+
+      .to(1140px, {
+        font-size: 20px;
+      });
 
       span {
         color: @orange;
@@ -108,21 +130,35 @@ nav {
       color:  #757575;
       font-size: 13px;
       letter-spacing: 4px;
-      margin-top: -8px;      
+      margin-top: -8px;
+      
+      .to(1140px, {
+        font-size: 9px;
+      });
     }
-  }
+  }  
 
   .nav-links {
-    display: flex;       
+    display: flex;
+    .to(830px, {
+      justify-content: center;
+    });    
 
     ul {
       display: flex;
-      flex-wrap: wrap;     
+      flex-wrap: wrap;
+      .to(830px, {
+        display: none;
+      });     
 
       li {              
         margin-right: 60px;
         box-sizing: border-box;
-        padding: 25px 0;        
+        padding: 25px 0;
+        .to(1140px, {
+          padding: 15px 0;
+          font-size: 14px;
+        });             
 
         &:hover {          
           color: @orange;
@@ -148,7 +184,20 @@ nav {
 
   img {
     max-width: 63%;
-    opacity: 0.3;   
+    opacity: 0.3;
+    
+    .to(1500px, {
+      max-width: 70%;
+    });
+    .to(1250px, {
+      max-width: 80%;
+    });
+    .to(730px, {
+      max-width: 90%;
+    });
+    .to(550px, {
+      max-width: 100%;
+    });
   }
 
   .caption-upper-layer {
@@ -165,13 +214,38 @@ nav {
       font-weight: 700;
       letter-spacing: 2px;
       margin-top: 13%;
-      margin-bottom: 25px;      
+      margin-bottom: 25px;
+      
+      .to(1400px, {
+        font-size: 46px;
+      });
+      .to(1000px, {
+        font-size: 36px;
+      });
+      .to(600px, {
+        margin-top: 10%;
+        font-size: 33px;
+      });
+      .to(500px, {
+        margin-top: 13%;
+        font-size: 25px;
+      })
     }
 
     p {
       color: #ffffff;
       font-size: 20px;
-      font-weight: 300;          
+      font-weight: 300;
+      
+      .to(1400px, {
+        font-size: 16px;
+      });
+      .to(1000px, {
+        font-size: 14px;
+      });
+      .to(500px, {
+        font-size: 12px;
+      })      
     }
 
     button {
@@ -186,6 +260,9 @@ nav {
       letter-spacing: 1px;
       margin-top: 30px;
       transition: color 0.5s, background-color 0.5s;
+      .to(830px, {
+        padding: 12px 45px 15px;
+      });
 
       &:hover {
         cursor: pointer;
@@ -201,6 +278,10 @@ nav {
 .services {
   max-width: 100%;
   margin-bottom: 80px;
+  
+  .to(900px, {
+    margin-bottom: 30px;
+  });  
 }
 
 .services-caption {
@@ -214,6 +295,16 @@ nav {
   white-space: nowrap;
   padding-top: 70px;
   padding-bottom: 30px;
+  .to(1100px, {
+    padding-top: 30px;
+  });
+  .to(950px, {
+    font-size: 30px;    
+  });
+  .to(650px, {
+    padding: 10px 0;
+    font-size: 25px;
+  });
 
   &::before {
     content: '';
@@ -243,7 +334,6 @@ nav {
 }
 
 .services-items {
-
   img {
     align-self: flex-start;
   }
@@ -254,7 +344,8 @@ nav {
   .services-item {
     .col-padding();
     padding: 0;
-    .size(3.12);    
+    .size(3.12);
+    .size-sm(6);    
   }
 }
 
