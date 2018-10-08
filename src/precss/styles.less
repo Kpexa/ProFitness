@@ -301,8 +301,7 @@ nav {
   .to(950px, {
     font-size: 30px;    
   });
-  .to(650px, {
-    padding: 10px 0;
+  .to(650px, {    
     font-size: 25px;
   });
 
@@ -355,6 +354,9 @@ nav {
   background: url(../images/dumbbel.png) no-repeat center; 
   background-size: cover;
   height: 1029px;
+  .to(950px, {
+    height: 850px;
+  });
 
   .about-us-caption {
     color: #fff;
@@ -368,6 +370,15 @@ nav {
     white-space: nowrap;
     padding-top: 70px;
     padding-bottom: 30px;
+    .to(1100px, {
+      padding-top: 30px;
+    });
+    .to(950px, {
+      font-size: 30px;    
+    });
+    .to(650px, {      
+      font-size: 25px;
+    });
 
     &::before {
       content: '';
@@ -404,16 +415,26 @@ nav {
     font-weight: 300;
     letter-spacing: 1px;
     color: #fff;
+    .to(950px, {
+      font-size: 15px;    
+    });
+    .to(650px, {
+      font-size: 13px;
+    })
   }
 }
 
 .about-us-items {
   .row-flex();
   justify-content: center;
+  .to(720px, {
+    justify-content: space-around;
+  });
 
   .about-us-item {
     .col();
     .size(2.7);
+    .size-xs(6);    
     text-align: center;
 
     img {      
@@ -424,6 +445,16 @@ nav {
 
     p {
       margin-top: 25px;
+      .to(950px, {
+        font-size: 15px;    
+      });
+      .to(800px, {
+        margin-top: 15px;
+        font-size: 12px;
+      });
+      .to(600px, {
+        font-size: 11px;
+      });
     }
 
     .circle {
@@ -448,6 +479,16 @@ nav {
     white-space: nowrap;
     padding-top: 70px;
     padding-bottom: 60px;
+    .to(1100px, {
+      padding-top: 30px;
+    });
+    .to(950px, {
+      font-size: 30px;
+      padding: 30px 0;    
+    });
+    .to(650px, {      
+      font-size: 25px;
+    });
 
     &::before {
       content: '';
@@ -478,18 +519,26 @@ nav {
 
   .coaches-items {
     .row-flex();
-    justify-content: space-around;
-    padding-bottom: 80px;
+    justify-content: space-around;    
 
     .coaches-item {
       .col();
       .size(2);
+      .size-md(6);
+      .size-xs(12);
       text-align: center;
+      margin-bottom: 50px;
 
       .item-header {
         margin-top: 17px;
         font-size: 26px;
         font-weight: 700;
+        .to(1350px, {
+          font-size: 24px;
+        });
+        .to(1260px, {
+          font-size: 22px;
+        });
       }
 
       .item-subheader {
@@ -520,7 +569,10 @@ nav {
     font-weight: 700;
     letter-spacing: 2px;
     color: #fff;
-    text-align: center;    
+    text-align: center;
+    .to(575px, {
+      font-size: 31px;
+    });    
   }
 
   button {
@@ -563,6 +615,16 @@ nav {
     white-space: nowrap;
     padding-top: 70px;
     padding-bottom: 50px;
+    .to(1100px, {
+      padding-top: 30px;
+    });
+    .to(950px, {
+      font-size: 30px;
+      padding: 30px 0;    
+    });
+    .to(650px, {      
+      font-size: 25px;
+    });
 
     &::before {
       content: '';
@@ -599,9 +661,12 @@ nav {
   .feedbacks-item {
     .col();
     .size(4);
+    .size-md(6);
+    .size-xs(12);
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 
     .item-text {
       text-align: center;
@@ -624,7 +689,7 @@ nav {
   }
 
   .feedbacks-controls {
-    margin-top: 45px;
+    margin-top: 35px;
     text-align: center;
 
     .fa-chevron{
@@ -678,6 +743,15 @@ nav {
     letter-spacing: 2px;
     color: #fff;
     text-align: center;
+    .to(750px, {
+      font-size: 31px;
+    });
+    .to(620px, {
+      padding: 0 45px;
+    });
+    .to(550px, {
+      font-size: 26px;
+    });
   }
 
   p {
@@ -689,9 +763,24 @@ nav {
     font-weight: 300;
     letter-spacing: 1px;
     color: rgba(255,255,255, 0.6);
+    .to(750px, {
+      font-size: 14px;
+    });
+    .to(620px, {
+      padding: 0 35px;
+    });
+    .to(550px, {
+      font-size: 12px;
+    });
   }
 
   .form {
+    .to(650px, {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    });
 
     input {
       background-color: transparent;
@@ -705,6 +794,9 @@ nav {
       font-size: 15px;
       color: rgba(255,255,255, 0.2);
       margin-right: 10px;
+      .to(750px, {        
+        padding: 10px;
+      });
       
       &::placeholder {
         font-family: @font;
@@ -727,6 +819,9 @@ nav {
       letter-spacing: 1px;
       margin-top: 30px;
       transition: color 0.5s, background-color 0.5s;
+      .to(750px, {
+        padding: 12px 55px 13px;
+      });
 
       &:hover {
         cursor: pointer;
@@ -752,10 +847,34 @@ footer {
   background-size: cover;
   height: 380px;
   padding-top: 50px;
+  .to(992px, {
+    height: 280px;
+  });
+  .to(735px, {
+    height: 310px;
+  });
+  .to(720px, {
+    height: 440px;
+  });
+  .to(576px, {
+    height: 580px;
+  });
+  .to(470px, {
+    height: 600px;
+  });
+  .to(380px, {
+    height: 630px;
+  });
 
   .footer-sections {
     .row-flex();
     justify-content: center;
+    .to(1400px, {
+      justify-content: space-around;
+    });
+    .to(720px, {
+      justify-content: center;
+    });      
     
     .footer-section {
       .col();      
@@ -763,6 +882,15 @@ footer {
 
     .social-media {
       .size(4);
+      .size-md(5);
+      .size-sm(10);
+      .to(720px, {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 25px;
+      });
 
       .logo {
         .first-line {
@@ -792,6 +920,12 @@ footer {
         line-height: 25px;
         margin-top: 20px;
         padding-right: 50px;
+        .to(1400px, {
+          padding-right: 0;
+        });
+        .to(720px, {
+          text-align: center;
+        });
       }
 
       .icons {
@@ -864,6 +998,10 @@ footer {
     
     .pages {
       .size(2.2);
+      
+      .to(992px, {
+        display: none;
+      });
 
       .caption {
         color:  #212121;
@@ -890,13 +1028,22 @@ footer {
 
     .contacts {
       .size(2.2);
+      .size-md(3.5);
+      .size-sm(5);
+      .size-xs(12);
+      .to(576px, {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+      });      
 
       .caption {
         color:  #212121;
         font-size: 18px;
         letter-spacing: 0.5px;
         font-weight: 700;
-        margin-bottom: 25px;
+        margin-bottom: 25px;        
       }
 
       .phone {
@@ -950,6 +1097,14 @@ footer {
 
     .schedule {
       .size(2.2);
+      .size-md(3.5);
+      .size-sm(5);
+      .size-xs(12);
+      .to(576px, {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      });
 
       .caption {
         color:  #212121;
@@ -972,6 +1127,9 @@ footer {
     display: flex;
     justify-content: center;
     margin-top: 30px;
+    .to(576px, {
+      margin-top: 10px;
+    });
 
     .fa-copyright {
       font-size: 12px;
