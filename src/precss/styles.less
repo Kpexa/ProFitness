@@ -4,7 +4,11 @@
 .reset();
 
 .wrapper {
-	.wrapper();
+  .wrapper();
+  
+  .to(1500px, {
+    padding: 0 30px;
+  })
 }
 
 body {
@@ -17,29 +21,20 @@ body {
 
 // -------------   HEADER   --------------
 
-.main-header-wrapper {
-  max-width: 100%;
-  background-color:  #171b1f;
-}
-
 header {  
-  box-sizing: border-box;
-  .flex();
-  justify-content: center;
-  background-color:  #171b1f;
-  color:  #cecece;
-  font-size: 14px;
-  padding: 15px 8% 12px;
-
+  background-color:  #171b1f; 
+  
   .data-group {
     .flex();
-    justify-content: center;    
-    margin-right: auto;
-
+    justify-content: center;   
+    color:  #cecece;
+    font-size: 14px;
+    padding: 15px 0;
+  
     .phone, .email, .address, .schedule {
       display: flex;
       margin-right: 45px;
-
+  
       &:hover {
         cursor: pointer;
       }
@@ -54,7 +49,7 @@ header {
     .phone-number:hover, .email-address:hover, .address-details:hover, .schedule-details:hover {
       color: @orange;      
     }
-
+  
     .fa-phone, .fa-envelope, .fa-map-marker-alt, .fa-clock {
       margin-right: 7px;
       font-size: 16px;
@@ -64,26 +59,27 @@ header {
       }
     }    
   }  
-
+  
   .social-media {
     font-size: 18px;
-
+    margin-left: auto;
+  
     .fa-facebook-f, .fa-vk, .fa-youtube {
       margin-right: 16px;
       font-size: 16px;      
     }
-
+  
     .fa-instagram {
       font-size: 16px;
     }
-
+  
     .fa-facebook-f:hover, .fa-vk:hover, .fa-youtube:hover, .fa-instagram:hover {
       color: @orange;
       cursor: pointer;
       font-size: 19px;
     }
-  }  
-}
+  } 
+} 
 
 // -------------   NAV   --------------
 
@@ -93,8 +89,7 @@ nav {
   .flex();
   justify-content: center;
   align-items: center;
-  padding: 0 8%;
-
+  
   .logo {
     margin-right: auto;
 

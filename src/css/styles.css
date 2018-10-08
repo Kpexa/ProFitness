@@ -119,25 +119,8 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.main-header-wrapper {
-  max-width: 100%;
-  background-color: #171b1f;
-}
-
 header {
-  box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   background-color: #171b1f;
-  color: #cecece;
-  font-size: 14px;
-  padding: 15px 8% 12px;
 }
 
 header .data-group {
@@ -149,7 +132,9 @@ header .data-group {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  margin-right: auto;
+  color: #cecece;
+  font-size: 14px;
+  padding: 15px 0;
 }
 
 header .data-group .phone,
@@ -203,6 +188,7 @@ header .data-group .fa-clock:hover {
 
 header .social-media {
   font-size: 18px;
+  margin-left: auto;
 }
 
 header .social-media .fa-facebook-f,
@@ -239,7 +225,6 @@ nav {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 0 8%;
 }
 
 nav .logo {
@@ -1148,6 +1133,12 @@ footer .rights p {
   font-size: 12px;
   color: #757575;
   letter-spacing: 0.5px;
+}
+
+@media screen and (max-width: 1500px) {
+  .wrapper {
+    padding: 0 30px;
+  }
 }
 
 @media screen and (max-width: 992px) {
