@@ -249,7 +249,7 @@ nav .logo {
 nav .logo .first-line {
   font-size: 24px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: #212121;
 }
 
@@ -260,7 +260,7 @@ nav .logo .first-line span {
 nav .logo .second-line {
   color: #757575;
   font-size: 13px;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   margin-top: -8px;
 }
 
@@ -888,7 +888,7 @@ nav .nav-links ul li:last-child {
 footer {
   background: url(../images/footer.png) no-repeat center;
   background-size: cover;
-  height: 400px;
+  height: 380px;
   padding-top: 50px;
 }
 
@@ -919,7 +919,7 @@ footer .footer-sections .social-media {
 footer .footer-sections .social-media .logo .first-line {
   font-size: 24px;
   font-weight: 700;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: #212121;
 }
 
@@ -930,20 +930,224 @@ footer .footer-sections .social-media .logo .first-line span {
 footer .footer-sections .social-media .logo .second-line {
   color: #757575;
   font-size: 13px;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   margin-top: -8px;
+}
+
+footer .footer-sections .social-media .text {
+  color: #757575;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  line-height: 25px;
+  margin-top: 20px;
+  padding-right: 50px;
+}
+
+footer .footer-sections .social-media .icons {
+  margin-top: 30px;
+}
+
+footer .footer-sections .social-media .icons .fa-facebook-f {
+  color: #fe5621;
+  border: 1px solid #fe5621;
+  border-radius: 50%;
+  padding: 10px 15px;
+  margin-right: 10px;
+  -webkit-transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+footer .footer-sections .social-media .icons .fa-facebook-f:hover {
+  background-color: #fe5621;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer .footer-sections .social-media .icons .fa-vk {
+  color: #fe5621;
+  border: 1px solid #fe5621;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 10px;
+  -webkit-transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+footer .footer-sections .social-media .icons .fa-vk:hover {
+  background-color: #fe5621;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer .footer-sections .social-media .icons .fa-youtube {
+  color: #fe5621;
+  border: 1px solid #fe5621;
+  border-radius: 50%;
+  padding: 10px;
+  margin-right: 10px;
+  -webkit-transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+footer .footer-sections .social-media .icons .fa-youtube:hover {
+  background-color: #fe5621;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer .footer-sections .social-media .icons .fa-instagram {
+  color: #fe5621;
+  border: 1px solid #fe5621;
+  border-radius: 50%;
+  padding: 10px 12px;
+  margin-right: 10px;
+  -webkit-transition: background-color 0.4s, color 0.4s;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+footer .footer-sections .social-media .icons .fa-instagram:hover {
+  background-color: #fe5621;
+  color: #fff;
+  cursor: pointer;
+}
+
+footer .footer-sections .social-media .icons .fa::last-child {
+  margin-right: 0;
 }
 
 footer .footer-sections .pages {
   width: calc(18.333333333333336% - 20px);
 }
 
+footer .footer-sections .pages .caption {
+  color: #212121;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+footer .footer-sections .pages ul {
+  margin-top: 25px;
+}
+
+footer .footer-sections .pages ul li {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #757575;
+}
+
+footer .footer-sections .pages ul li:hover {
+  cursor: pointer;
+  color: #fe5621;
+}
+
 footer .footer-sections .contacts {
   width: calc(18.333333333333336% - 20px);
 }
 
+footer .footer-sections .contacts .caption {
+  color: #212121;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+footer .footer-sections .contacts .phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-sections .contacts .phone .fa-phone {
+  margin-right: 10px;
+  color: #757575;
+  margin-bottom: 20px;
+}
+
+footer .footer-sections .contacts .phone .phone-number {
+  font-size: 16px;
+  color: #757575;
+  letter-spacing: 0.5px;
+}
+
+footer .footer-sections .contacts .email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-sections .contacts .email .fa-envelope {
+  margin-right: 10px;
+  color: #757575;
+  margin-bottom: 20px;
+}
+
+footer .footer-sections .contacts .email .email-address {
+  font-size: 16px;
+  color: #757575;
+  letter-spacing: 0.5px;
+}
+
+footer .footer-sections .contacts .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-sections .contacts .address .fa-map-marker-alt {
+  margin-right: 10px;
+  color: #757575;
+  margin-bottom: 20px;
+}
+
+footer .footer-sections .contacts .address .address-details {
+  font-size: 16px;
+  color: #757575;
+  letter-spacing: 0.5px;
+}
+
 footer .footer-sections .schedule {
   width: calc(18.333333333333336% - 20px);
+}
+
+footer .footer-sections .schedule .caption {
+  color: #212121;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+footer .footer-sections .schedule p {
+  font-size: 16px;
+  color: #757575;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+}
+
+footer .rights {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+footer .rights .fa-copyright {
+  font-size: 12px;
+  color: #757575;
+  margin-top: 3px;
+  margin-right: 3px;
+}
+
+footer .rights p {
+  font-size: 12px;
+  color: #757575;
+  letter-spacing: 0.5px;
 }
 
 @media screen and (max-width: 992px) {

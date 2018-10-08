@@ -101,7 +101,7 @@ nav {
     .first-line {
       font-size: 24px;
       font-weight: 700;  
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       color:  #212121;
 
       span {
@@ -112,7 +112,7 @@ nav {
     .second-line {
       color:  #757575;
       font-size: 13px;
-      letter-spacing: 5px;
+      letter-spacing: 4px;
       margin-top: -8px;      
     }
   }
@@ -664,7 +664,7 @@ nav {
 footer {
   background: url(../images/footer.png) no-repeat center; 
   background-size: cover;
-  height: 400px;
+  height: 380px;
   padding-top: 50px;
 
   .footer-sections {
@@ -682,7 +682,7 @@ footer {
         .first-line {
           font-size: 24px;
           font-weight: 700;  
-          letter-spacing: 2px;
+          letter-spacing: 1px;
           color:  #212121;
     
           span {
@@ -693,22 +693,211 @@ footer {
         .second-line {
           color:  #757575;
           font-size: 13px;
-          letter-spacing: 5px;
+          letter-spacing: 4px;
           margin-top: -8px;      
         }
-      }    
+      }
+      
+      .text {
+        color:  #757575;
+        font-size: 14px;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+        line-height: 25px;
+        margin-top: 20px;
+        padding-right: 50px;
+      }
+
+      .icons {
+        margin-top: 30px;
+
+        .fa{
+          &-facebook-f {
+            color: @orange;
+            border: 1px solid @orange;
+            border-radius: 50%;
+            padding: 10px 15px;
+            margin-right: 10px;
+            transition: background-color 0.4s, color 0.4s;
+
+            &:hover {
+              background-color: @orange;
+              color: #fff;
+              cursor: pointer;
+            }
+          }
+          &-vk {
+            color: @orange;
+            border: 1px solid @orange;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 10px;
+            transition: background-color 0.4s, color 0.4s;
+
+            &:hover {
+              background-color: @orange;
+              color: #fff;
+              cursor: pointer;
+            }
+          }
+          &-youtube {
+            color: @orange;
+            border: 1px solid @orange;
+            border-radius: 50%;
+            padding: 10px;
+            margin-right: 10px;
+            transition: background-color 0.4s, color 0.4s;
+
+            &:hover {
+              background-color: @orange;
+              color: #fff;
+              cursor: pointer;
+            }
+          }
+          &-instagram {
+            color: @orange;
+            border: 1px solid @orange;
+            border-radius: 50%;
+            padding: 10px 12px;
+            margin-right: 10px;
+            transition: background-color 0.4s, color 0.4s;
+            
+            &:hover {
+              background-color: @orange;
+              color: #fff;
+              cursor: pointer;
+            }
+          }
+          
+          &::last-child {
+            margin-right: 0;
+          }
+        }
+      }
     }
     
     .pages {
       .size(2.2);
+
+      .caption {
+        color:  #212121;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        font-weight: 700;
+      }
+
+      ul {
+        margin-top: 25px;
+
+        li {
+          margin-bottom: 20px;
+          font-size: 16px;
+          color:  #757575;
+
+          &:hover {
+            cursor: pointer;
+            color: @orange;
+          }
+        }
+      }
     }
 
     .contacts {
       .size(2.2);
+
+      .caption {
+        color:  #212121;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        font-weight: 700;
+        margin-bottom: 25px;
+      }
+
+      .phone {
+        display: flex;
+
+        .fa-phone {
+          margin-right: 10px;
+          color:  #757575;
+          margin-bottom: 20px;
+        }
+
+        .phone-number {
+          font-size: 16px;
+          color:  #757575;
+          letter-spacing: 0.5px;
+        }
+      }
+
+      .email {
+        display: flex;
+
+        .fa-envelope {
+          margin-right: 10px;
+          color:  #757575;
+          margin-bottom: 20px;
+        }
+
+        .email-address {
+          font-size: 16px;
+          color:  #757575;
+          letter-spacing: 0.5px;
+        }
+      }
+
+      .address {
+        display: flex;
+
+        .fa-map-marker-alt {
+          margin-right: 10px;
+          color:  #757575;
+          margin-bottom: 20px;
+        }
+
+        .address-details {
+          font-size: 16px;
+          color:  #757575;
+          letter-spacing: 0.5px;
+        }
+      }
     }
 
     .schedule {
       .size(2.2);
+
+      .caption {
+        color:  #212121;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        font-weight: 700;
+        margin-bottom: 25px;
+      }
+
+      p {
+        font-size: 16px;
+        color:  #757575;
+        letter-spacing: 0.5px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .rights {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+
+    .fa-copyright {
+      font-size: 12px;
+      color:  #757575;
+      margin-top: 3px;
+      margin-right: 3px;
+    }
+
+    p {
+      font-size: 12px;
+      color:  #757575;
+      letter-spacing: 0.5px;
     }
   }
 }
