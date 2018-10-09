@@ -9,6 +9,7 @@
 
 body {
   font-family: @font;
+  position: relative;  
 }
 // .debug {
 //   .debug(rgba(8, 161, 161, 0.3), 1px solid rgba(8, 161, 161, 0.3));
@@ -18,7 +19,10 @@ body {
 // -------------   HEADER   --------------
 
 header {  
-  background-color: #171b1f; 
+  background-color: #171b1f;
+  .to(830px, {
+    display: none;
+  }); 
   
   .data-group {
     .flex();
@@ -97,82 +101,133 @@ header {
 
 // -------------   NAV   --------------
 
-nav {  
+.menu {
   max-width: 100%;
-  box-sizing: border-box;
-  .flex();
-  justify-content: center;
-  align-items: center;    
+  position: relative;
+  background-color: #fff;
+
+  .to(830px, {
+    max-width: 100%;
+    position: fixed;
+    z-index: 1;        
+  }); 
   
-  .logo {
-    margin-right: auto;
+  nav {  
+    max-width: 100%;
+    box-sizing: border-box;    
+    .flex();
+    justify-content: center;
+    align-items: center;
     .to(830px, {
-      margin-right: 0;
-      padding: 10px 0;      
+      position: fixed;
+      z-index: 3;
+      left: 0;
+      right: 0;
+      background-color: #fff;     
     });    
-
-    .first-line {
-      font-size: 24px;
-      font-weight: 700;  
-      letter-spacing: 1px;
-      color:  #212121;
-
-      .to(1140px, {
-        font-size: 20px;
-      });
-
-      span {
-        color: @orange;
-      }  
-    }
-
-    .second-line {
-      color:  #757575;
-      font-size: 13px;
-      letter-spacing: 4px;
-      margin-top: -8px;
-      
-      .to(1140px, {
-        font-size: 9px;
-      });
-    }
-  }  
-
-  .nav-links {
-    display: flex;
-    .to(830px, {
-      justify-content: center;
-    });    
-
-    ul {
-      display: flex;
-      flex-wrap: wrap;
+    
+    .logo {
+      margin-right: auto;
       .to(830px, {
-        display: none;
-      });     
-
-      li {              
-        margin-right: 60px;
-        box-sizing: border-box;
-        padding: 25px 0;
+        margin-right: 0;
+        padding: 10px 0;
+        cursor: pointer;      
+      });    
+  
+      .first-line {
+        font-size: 24px;
+        font-weight: 700;  
+        letter-spacing: 1px;
+        color:  #212121;
+  
         .to(1140px, {
-          padding: 15px 0;
-          font-size: 14px;
-        });             
-
-        &:hover {          
+          font-size: 20px;
+        });
+  
+        span {
           color: @orange;
-          cursor: pointer;
-          // border-bottom: 2px solid @orange;                     
-        }
+        }  
+      }
+  
+      .second-line {
+        color:  #757575;
+        font-size: 13px;
+        letter-spacing: 4px;
+        margin-top: -8px;
+        
+        .to(1140px, {
+          font-size: 9px;
+        });
+      }
+    }  
+  
+    .nav-links {
+      display: flex;
+      .to(830px, {
+        justify-content: center;
+      });
+      
+      .active-link {
+        color: @orange;
+      }
 
-        &:last-child {
-          margin-right: 0;
+      .links {
+        .to(830px, {
+          display: none;
+        });        
+      }
+  
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        .to(830px, {
+          background-color: #fff;
+          display: inline-block;			
+          width: 100%;
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 50px;
+        });     
+  
+        li {              
+          margin-right: 60px;
+          box-sizing: border-box;
+          padding: 25px 0;
+          .to(1140px, {
+            padding: 15px 0;
+            font-size: 14px;
+          });
+          .to(830px, {
+            margin-right: 0;
+            text-align: center;
+            padding: 10px 0;
+          });             
+  
+          &:hover {          
+            cursor: pointer;
+            // border-bottom: 2px solid @orange;                     
+          }
+  
+          &:last-child {
+            margin-right: 0;
+          }
+  
+          a {
+            text-decoration: none;
+            color: #030303;
+  
+            &:hover {
+              color: @orange;            
+            }
+          }
         }
       }
     }
   }
 }
+
+
 
 // -------------   CAPTION   --------------
 
@@ -1019,8 +1074,16 @@ footer {
           color:  #757575;
 
           &:hover {
-            cursor: pointer;
-            color: @orange;
+            cursor: pointer;            
+          }
+
+          a {
+            text-decoration: none;
+            color: #030303;
+  
+            &:hover {
+              color: @orange;            
+            }
           }
         }
       }

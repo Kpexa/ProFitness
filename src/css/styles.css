@@ -117,6 +117,7 @@ img {
 
 body {
   font-family: 'Open Sans', sans-serif;
+  position: relative;
 }
 
 header {
@@ -210,7 +211,13 @@ header .social-media .fa-instagram:hover {
   cursor: pointer;
 }
 
-nav {
+.menu {
+  max-width: 100%;
+  position: relative;
+  background-color: #fff;
+}
+
+.menu nav {
   max-width: 100%;
   box-sizing: border-box;
   display: -webkit-box;
@@ -226,35 +233,39 @@ nav {
   align-items: center;
 }
 
-nav .logo {
+.menu nav .logo {
   margin-right: auto;
 }
 
-nav .logo .first-line {
+.menu nav .logo .first-line {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: 1px;
   color: #212121;
 }
 
-nav .logo .first-line span {
+.menu nav .logo .first-line span {
   color: #fe5621;
 }
 
-nav .logo .second-line {
+.menu nav .logo .second-line {
   color: #757575;
   font-size: 13px;
   letter-spacing: 4px;
   margin-top: -8px;
 }
 
-nav .nav-links {
+.menu nav .nav-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav .nav-links ul {
+.menu nav .nav-links .active-link {
+  color: #fe5621;
+}
+
+.menu nav .nav-links ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -262,19 +273,27 @@ nav .nav-links ul {
   flex-wrap: wrap;
 }
 
-nav .nav-links ul li {
+.menu nav .nav-links ul li {
   margin-right: 60px;
   box-sizing: border-box;
   padding: 25px 0;
 }
 
-nav .nav-links ul li:hover {
-  color: #fe5621;
+.menu nav .nav-links ul li:hover {
   cursor: pointer;
 }
 
-nav .nav-links ul li:last-child {
+.menu nav .nav-links ul li:last-child {
   margin-right: 0;
+}
+
+.menu nav .nav-links ul li a {
+  text-decoration: none;
+  color: #030303;
+}
+
+.menu nav .nav-links ul li a:hover {
+  color: #fe5621;
 }
 
 .caption-section {
@@ -1024,6 +1043,14 @@ footer .footer-sections .pages ul li {
 
 footer .footer-sections .pages ul li:hover {
   cursor: pointer;
+}
+
+footer .footer-sections .pages ul li a {
+  text-decoration: none;
+  color: #030303;
+}
+
+footer .footer-sections .pages ul li a:hover {
   color: #fe5621;
 }
 
@@ -1204,15 +1231,15 @@ footer .rights p {
     font-size: 16px;
   }
 
-  nav .logo .first-line {
+  .menu nav .logo .first-line {
     font-size: 20px;
   }
 
-  nav .logo .second-line {
+  .menu nav .logo .second-line {
     font-size: 9px;
   }
 
-  nav .nav-links ul li {
+  .menu nav .nav-links ul li {
     padding: 15px 0;
     font-size: 14px;
   }
@@ -1329,19 +1356,54 @@ footer .rights p {
 }
 
 @media screen and (max-width: 830px) {
-  nav .logo {
-    margin-right: 0;
-    padding: 10px 0;
+  header {
+    display: none;
   }
 
-  nav .nav-links {
+  .menu {
+    max-width: 100%;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .menu nav {
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+  }
+
+  .menu nav .logo {
+    margin-right: 0;
+    padding: 10px 0;
+    cursor: pointer;
+  }
+
+  .menu nav .nav-links {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
   }
 
-  nav .nav-links ul {
+  .menu nav .nav-links .links {
     display: none;
+  }
+
+  .menu nav .nav-links ul {
+    background-color: #fff;
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50px;
+  }
+
+  .menu nav .nav-links ul li {
+    margin-right: 0;
+    text-align: center;
+    padding: 10px 0;
   }
 
   .caption-section .caption-upper-layer button {
