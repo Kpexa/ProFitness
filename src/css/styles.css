@@ -192,6 +192,11 @@ header .social-media {
   margin-left: auto;
 }
 
+header .social-media a {
+  text-decoration: none;
+  color: #cecece;
+}
+
 header .social-media .fa-facebook-f,
 header .social-media .fa-vk,
 header .social-media .fa-youtube {
@@ -417,11 +422,20 @@ header .social-media .fa-instagram:hover {
 }
 
 .services-items .services-item {
+  position: relative;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   word-wrap: break-word;
   padding-left: 10px;
   padding-right: 10px;
   padding: 0;
   width: calc(26.000000000000004% - 20px);
+}
+
+.services-items .services-item:hover {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .about-us {
@@ -958,6 +972,11 @@ footer .footer-sections .social-media .text {
 
 footer .footer-sections .social-media .icons {
   margin-top: 30px;
+}
+
+footer .footer-sections .social-media .icons a {
+  text-decoration: none;
+  color: #fe5621;
 }
 
 footer .footer-sections .social-media .icons .fa-facebook-f {
