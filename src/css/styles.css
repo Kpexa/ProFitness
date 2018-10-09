@@ -480,6 +480,20 @@ header .social-media .fa-instagram:hover {
   color: #fff;
 }
 
+.video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.video img {
+  -ms-flex-item-align: center;
+  align-self: center;
+}
+
 .about-us-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -881,12 +895,6 @@ header .social-media .fa-instagram:hover {
   cursor: pointer;
   background-color: #fff;
   color: #fe5621;
-}
-
-.map {
-  background: url(../images/map.png) no-repeat center;
-  background-size: cover;
-  height: 500px;
 }
 
 footer {
@@ -1314,7 +1322,7 @@ footer .rights p {
   }
 
   .about-us {
-    height: 850px;
+    height: 1000px;
   }
 
   .about-us .about-us-caption {
@@ -1412,6 +1420,10 @@ footer .rights p {
 }
 
 @media screen and (max-width: 800px) {
+  .about-us {
+    height: 900px;
+  }
+
   .about-us-items .about-us-item p {
     margin-top: 15px;
     font-size: 12px;
@@ -1502,6 +1514,12 @@ footer .rights p {
   }
 }
 
+@media screen and (max-width: 700px) {
+  .about-us {
+    height: 850px;
+  }
+}
+
 @media screen and (max-width: 650px) {
   .services-caption {
     font-size: 25px;
@@ -1562,6 +1580,10 @@ footer .rights p {
 }
 
 @media screen and (max-width: 576px) {
+  .about-us {
+    height: 900px;
+  }
+
   .about-us-items .about-us-item {
     width: calc(50% - 20px);
   }

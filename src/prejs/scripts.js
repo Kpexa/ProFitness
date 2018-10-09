@@ -41,5 +41,28 @@ $(function(){
   $(document).on('scroll', function(){
     links.removeClass('active-link');
   });
-
+    
 });
+
+function initMap(){
+
+  let element = document.querySelector('#map');
+  let options = {
+    zoom: 10,
+    center: {
+      lat: 50.448455, 
+      lng: 30.522480
+    }
+  };
+
+  let myMap = new google.maps.Map(element, options);
+
+  let marker = new google.maps.Marker({
+    position: {
+      lat: 50.448455, 
+      lng: 30.522480
+    },
+    map: myMap
+  });
+
+}
