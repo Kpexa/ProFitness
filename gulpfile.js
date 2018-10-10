@@ -48,15 +48,15 @@ gulp.task('css', function(){
 });
 
 gulp.task('js', function(){
-    gulp.src(['./src/prejs/jquery-3.3.1.min.js', './src/prejs/scripts.js'])
-        .pipe(sourcemaps.init())
+    gulp.src(['./src/prejs/jquery-3.3.1.min.js', './src/prejs/jquery.magnific-popup.min.js', './src/prejs/scripts.js'])
+        // .pipe(sourcemaps.init())
         .pipe(concat('scripts.js'))
-        .pipe(babel({
-			presets: ['env']
-        }))
+        // .pipe(babel({
+		// 	presets: ['env']
+        // }))
         .on('error', console.error.bind(console))
-        .pipe(uglify())
-        .pipe(sourcemaps.write('.'))
+        // .pipe(uglify())
+        // .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(config.root + config.js.dest))
 });
 
