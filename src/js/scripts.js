@@ -54,8 +54,7 @@ $(function(){
   let second_click = false;
   let first_click_choise = {};
   let modal_btn = $('.free-lesson .button #btn, .caption-upper-layer .button #btn');  
-  let choose_prog_btn = $('.choose-prog-btn');
-  let loose_weight = 'Программа на жиросжигание';
+  let choose_prog_btn = $('.choose-prog-btn');  
   
   modal_btn.magnificPopup().on('click', function(){
     
@@ -68,7 +67,7 @@ $(function(){
         let user_age = $('.form input[name="age"]').val();
         let user_weight = $('.form input[name="weight"]').val();
         let user_gender = $('.form input[name="gender"]:checked').val();
-        let user_activities = getActivities();
+        let user_activities = getActivities();        
     
         function getActivities (){
     
@@ -80,60 +79,49 @@ $(function(){
           });
     
           return activities;
-    
-        };
-        
-        function defineProgramm (name, age, weight, activities) {
-          let programms;
-          
-          if(age >= 14 && age <= 18) {
-            switch (activities.length){
-              case 5:
-              programms = `<input type="checkbox"> ${activities[0]} для юниоров<br>
-                           <input type="checkbox"> ${activities[1]} для юниоров<br>
-                           <input type="checkbox"> ${activities[2]} для юниоров<br>
-                           <input type="checkbox"> ${activities[3]} для юниоров<br>
-                           <input type="checkbox"> ${activities[4]} для юниоров<br>`;
-              break;
-              case 4:
-              programms = `<input type="checkbox"> ${activities[0]} для юниоров<br>
-                           <input type="checkbox"> ${activities[1]} для юниоров<br>
-                           <input type="checkbox"> ${activities[2]} для юниоров<br>
-                           <input type="checkbox"> ${activities[3]} для юниоров<br>`;
-              break;
-              case 3:
-              programms = `<input type="checkbox"> ${activities[0]} для юниоров<br>
-                           <input type="checkbox"> ${activities[1]} для юниоров<br>
-                           <input type="checkbox"> ${activities[2]} для юниоров<br>`;
-              break; 
-              case 2:
-              programms = `<input type="checkbox"> ${activities[0]} для юниоров<br>
-                           <input type="checkbox"> ${activities[1]} для юниоров<br>`;
-              break;
-              case 1:
-              programms = `<input type="checkbox"> ${activities[0]} для юниоров<br>`;
-              break;               
-            }
-            if(weight >= 100) {
-            
-            }      
-            
-          }else if(age >= 19 && age <= 40){
-            if(weight >= 100) {
-              
-            
-          }else if (age >= 41 && age <= 60) {
-            if(weight >= 100) {
+        } 
 
-            }  
-            
-          }else{
-            // мы не рекомендуем заниматься по нашим программам в таком возрасте, позвоните по номеру указаном на сайте, для индивидуального подхода.
+        $('.programms').css('display', 'block');
+        $('.programms-form').html(defineProgramm(user_activities));
+
+      });     
+        
+        function defineProgramm (activities) {
+
+          let programms;          
+          
+          switch (activities.length){
+            case 5:
+            programms = `<input type="checkbox"> ${activities[0]}<br>
+                         <input type="checkbox"> ${activities[1]}<br>
+                         <input type="checkbox"> ${activities[2]}<br>
+                         <input type="checkbox"> ${activities[3]}<br>
+                         <input type="checkbox"> ${activities[4]}<br>`;
+            break;
+            case 4:
+            programms = `<input type="checkbox"> ${activities[0]}<br>
+                         <input type="checkbox"> ${activities[1]}<br>
+                         <input type="checkbox"> ${activities[2]}<br>
+                         <input type="checkbox"> ${activities[3]}<br>`;
+            break;
+            case 3:
+            programms = `<input type="checkbox"> ${activities[0]}<br>
+                         <input type="checkbox"> ${activities[1]}<br>
+                         <input type="checkbox"> ${activities[2]}<br>`;
+            break; 
+            case 2:
+            programms = `<input type="checkbox"> ${activities[0]}<br>
+                         <input type="checkbox"> ${activities[1]}<br>`;
+            break;
+            case 1:
+            programms = `<input type="checkbox"> ${activities[0]}<br>`;
+            break;               
           }
-        }
+          
+          return programms;
+
       }  
-      
-      });
+   
     } else {
       
     }   
