@@ -54,8 +54,10 @@ $(function(){
   let second_click = false;
   let first_click_choise = {};
   let modal_btn = $('.free-lesson .button #btn, .caption-upper-layer .button #btn');  
-  let choose_prog_btn = $('.choose-prog-btn');  
-  
+  let choose_prog_btn = $('.choose-prog-btn');
+  let programm_confirm = $('.confirm');
+  let first_choise = $('.choise');  
+
   modal_btn.magnificPopup().on('click', function(){
     
     if(second_click === false) {
@@ -67,24 +69,78 @@ $(function(){
         let user_age = $('.form input[name="age"]').val();
         let user_weight = $('.form input[name="weight"]').val();
         let user_gender = $('.form input[name="gender"]:checked').val();
-        let user_activities = getActivities();        
-    
+        let user_activities = getActivities();
+        let value_activities = getValueActivities();
+        let arr_activities = parseActivitiesValues(value_activities);       
+
         function getActivities (){
     
           let activities = [];
-    
-          $('.form input:checkbox:checked').each(function(){
-            // activities.push($(this).val());
+          
+          $('.form input:checkbox:checked').each(function(){            
             activities.push($(this).data('activity'));
           });
     
           return activities;
-        } 
+        }
+        
+        function getValueActivities(){
+          
+          let value_activities = [];
+    
+          $('.form input:checkbox:checked').each(function(){
+            value_activities.push($(this).val());            
+          });
+
+          return value_activities
+        }
+
+        function parseActivitiesValues(values){
+
+          let arr = [];
+
+          for(let i = 0; i < values.length; i++){
+
+            switch (values[i]){
+              case 'box':
+              arr.push($('.form input[name="activity-1"]').data('activity'));
+              break;
+              case 'crossfit':
+              arr.push($('.form input[name="activity-2"]').data('activity'));
+              break;
+              case 'powerlifting':
+              arr.push($('.form input[name="activity-3"]').data('activity'));
+              break;
+              case 'pilates':
+              arr.push($('.form input[name="activity-4"]').data('activity'));
+              break;
+              case 'aerobic':
+              arr.push($('.form input[name="activity-5"]').data('activity'));
+              break;
+            }
+
+          }
+
+          return arr;
+        }
+
+        let programm_caption = `Уважаемый ${user_name}, вот список программ составленный
+                                исходя из Вашего выбора активностей`
 
         $('.programms').css('display', 'block');
+        $('.programms h3').html(programm_caption);
         $('.programms-form').html(defineProgramm(user_activities));
 
-      });     
+      });
+      
+      programm_confirm.on('click', function(){
+        $('.choise').css('display', 'block');
+        let choise_caption = `Уважаемый ${user_name}, вот список программ которые Вы выбрали ранее:`;
+        first_choise.html('choise_caption')
+        for(let i = 0; i < arr_activities.length; i++){
+          first_choise.html('<input type="checkbox" checked>' + arr_activities[i]);
+        }        
+      });
         
         function defineProgramm (activities) {
 

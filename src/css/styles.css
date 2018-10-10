@@ -1340,6 +1340,10 @@ footer .rights p {
   display: none;
 }
 
+.choise {
+  display: none;
+}
+
 @media screen and (min-width: 992px) {
   .services-items .services-item-1:hover {
     -webkit-transform: scale(1.05);
