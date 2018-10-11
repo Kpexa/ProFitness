@@ -865,20 +865,13 @@ header {
     }
   }
 
-  .feedbacks-items {
-    .row-flex();
-    justify-content: center;
-  }
-
-  .feedbacks-item {
-    .col();
-    .size(4);
-    .size-md(6);
-    .size-xs(12);
+  .feedbacks-item {   
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
+    padding: 0 30px;        
 
     .item-text {
       text-align: center;
@@ -898,45 +891,7 @@ header {
         margin-right: 5px;        
       }
     }
-  }
-
-  .feedbacks-controls {
-    margin-top: 35px;
-    text-align: center;
-
-    .fa-chevron{
-      &-left{
-        font-size: 26px;
-        border: 2px solid @orange;
-        border-radius: 50%;
-        padding: 10px 17px 10px 15px;
-        color: @orange;
-        margin-right: 8px;
-        transition: background-color 0.4s, color 0.4s;
-
-        &:hover {
-          background-color: @orange;
-          color: #fff;
-          cursor: pointer;
-        }
-      }
-      &-right{
-        font-size: 26px;
-        border: 2px solid @orange;
-        border-radius: 50%;
-        padding: 10px 15px 10px 17px;
-        color: @orange;
-        margin-left: 8px;
-        transition: background-color 0.4s, color 0.4s;
-
-        &:hover {
-          background-color: @orange;
-          color: #fff;
-          cursor: pointer;
-        }
-      }
-    }
-  }
+  }  
 }
 
 // -------------   NEWS   --------------

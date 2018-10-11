@@ -42,6 +42,35 @@ $(function(){
     links.removeClass('active-link');
   });
 
+  $('.owl-carousel').owlCarousel({
+    loop: true,
+    margin: 30,
+    responsiveClass: true,
+    nav: true,
+    dots: false,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    navText : ['<i style="color: rgb(254, 86, 33); font-size: 26px; border: 2px solid rgb(254, 86, 33); border-radius: 50%; padding: 10px 17px 10px 15px; margin-right: 8px;" class="fa fa-chevron-left"></i>',
+               '<i style="color: rgb(254, 86, 33); font-size: 26px; border: 2px solid rgb(254, 86, 33); border-radius: 50%; padding: 10px 15px 10px 17px; margin-left: 8px;" class="fa fa-chevron-right"></i>'],
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:2,
+            nav:true
+        },
+        1000:{
+            items:3,
+            nav:true,
+            loop:true
+        }
+    }
+    
+  });
+
   // MODAL WINDOW
 
   let second_click = false;
@@ -123,17 +152,18 @@ $(function(){
         $('.programms').css('display', 'block');
         $('.programms h3').html(programm_caption);
         $('.programms-form').html(defineProgramm(user_activities));
-
+        
       });
-      
+
       programm_confirm.on('click', function(){
         $('.choise').css('display', 'block');
         let choise_caption = `Уважаемый ${user_name}, вот список программ которые Вы выбрали ранее:`;
-        first_choise.html('choise_caption')
+        first_choise.html(choise_caption);
         for(let i = 0; i < arr_activities.length; i++){
           first_choise.html('<input type="checkbox" checked>' + arr_activities[i]);
         }        
-      });
+      });     
+      
         
         function defineProgramm (activities) {
 

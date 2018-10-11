@@ -843,25 +843,7 @@ header .social-media .fa-instagram:hover {
   margin-right: -50%;
 }
 
-.feedbacks .feedbacks-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-left: -10px;
-  margin-right: -10px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 .feedbacks .feedbacks-item {
-  box-sizing: border-box;
-  word-wrap: break-word;
-  margin-left: 10px;
-  margin-right: 10px;
-  width: calc(33.333333333333336% - 20px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -869,10 +851,14 @@ header .social-media .fa-instagram:hover {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  padding: 0 30px;
 }
 
 .feedbacks .feedbacks-item .item-text {
@@ -894,45 +880,6 @@ header .social-media .fa-instagram:hover {
   color: rgba(189, 189, 189, 0.4);
   margin-top: 3px;
   margin-right: 5px;
-}
-
-.feedbacks .feedbacks-controls {
-  margin-top: 35px;
-  text-align: center;
-}
-
-.feedbacks .feedbacks-controls .fa-chevron-left {
-  font-size: 26px;
-  border: 2px solid #fe5621;
-  border-radius: 50%;
-  padding: 10px 17px 10px 15px;
-  color: #fe5621;
-  margin-right: 8px;
-  -webkit-transition: background-color 0.4s, color 0.4s;
-  transition: background-color 0.4s, color 0.4s;
-}
-
-.feedbacks .feedbacks-controls .fa-chevron-left:hover {
-  background-color: #fe5621;
-  color: #fff;
-  cursor: pointer;
-}
-
-.feedbacks .feedbacks-controls .fa-chevron-right {
-  font-size: 26px;
-  border: 2px solid #fe5621;
-  border-radius: 50%;
-  padding: 10px 15px 10px 17px;
-  color: #fe5621;
-  margin-left: 8px;
-  -webkit-transition: background-color 0.4s, color 0.4s;
-  transition: background-color 0.4s, color 0.4s;
-}
-
-.feedbacks .feedbacks-controls .fa-chevron-right:hover {
-  background-color: #fe5621;
-  color: #fff;
-  cursor: pointer;
 }
 
 .news {
@@ -1529,10 +1476,6 @@ footer .rights p {
     width: calc(50% - 20px);
   }
 
-  .feedbacks .feedbacks-item {
-    width: calc(50% - 20px);
-  }
-
   footer {
     height: 280px;
   }
@@ -1859,10 +1802,6 @@ footer .rights p {
   }
 
   .coaches .coaches-items .coaches-item {
-    width: calc(100% - 20px);
-  }
-
-  .feedbacks .feedbacks-item {
     width: calc(100% - 20px);
   }
 
