@@ -3,7 +3,8 @@ $(function(){
   let links = $('.links a');
   let nav_height = parseInt($('.links').height());  
   let nav_btn = $('.logo');
-  let nav_items = $('.nav-links .links');  
+  let nav_items = $('.nav-links .links');
+  let services_items = $('.services-item-1, .services-item-2');  
 
   links.on('click', function(e){
 
@@ -45,7 +46,14 @@ $(function(){
   $('.coaches-item').hover(function(){
     $(this).find('.img').toggleClass('img-wrapper');
     $(this).find('.item-header').toggleClass('item-header-color');
-  });  
+  });   
+
+  services_items.hover(function(){
+    $(this).find('h3').css('display', 'none');
+  });
+  services_items.mouseleave(function(){
+    $(this).find('h3').css('display', 'block');
+  });
 
   $('.owl-carousel').owlCarousel({
     loop: true,
