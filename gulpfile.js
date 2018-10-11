@@ -37,9 +37,9 @@ gulp.task('css', function(){
             browsers: ['>0.1%'],
             cascade: false
         }))
-        // .pipe(cleanCSS({
-        //     level: 1
-        // }))
+        .pipe(cleanCSS({
+            level: 1
+        }))
         .pipe(gulp.dest(config.root + config.css.dest))
         .pipe(browserSync.reload({
             stream: true
@@ -49,14 +49,14 @@ gulp.task('css', function(){
 
 gulp.task('js', function(){
     gulp.src(['./src/prejs/jquery-3.3.1.min.js', './src/prejs/jquery.magnific-popup.min.js', './src/prejs/owl.carousel.min.js', './src/prejs/scripts.js'])
-        // .pipe(sourcemaps.init())
+        .pipe(sourcemaps.init())
         .pipe(concat('scripts.js'))
-        // .pipe(babel({
-		// 	presets: ['env']
-        // }))
+        .pipe(babel({
+			presets: ['env']
+        }))
         .on('error', console.error.bind(console))
-        // .pipe(uglify())
-        // .pipe(sourcemaps.write('.'))
+        .pipe(uglify())
+        .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(config.root + config.js.dest))
 });
 
