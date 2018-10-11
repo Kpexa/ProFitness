@@ -960,6 +960,11 @@ header .social-media .fa-instagram:hover {
   color: #fe5621;
 }
 
+#map {
+  width: 100%;
+  height: 500px;
+}
+
 footer {
   background: url(../images/footer.png) no-repeat center;
   background-size: cover;
