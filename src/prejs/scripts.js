@@ -42,6 +42,11 @@ $(function(){
     links.removeClass('active-link');
   });
 
+  $('.coaches-item').hover(function(){
+    $(this).find('.img').toggleClass('img-wrapper');
+    $(this).find('.item-header').toggleClass('item-header-color');
+  });  
+
   $('.owl-carousel').owlCarousel({
     loop: true,
     margin: 30,
