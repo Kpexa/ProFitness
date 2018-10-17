@@ -91,9 +91,10 @@ $(function(){
   // let modal_btn = $('.free-lesson .button #btn, .caption-upper-layer .button #btn');  
   // let choose_prog_btn = $('.choose-prog-btn');
   // let programm_confirm = $('.confirm');
-  // let first_choise = $('.choise');  
+  // let first_choise = $('.choise');   
 
-  // modal_btn.magnificPopup().on('click', function(){
+  // modal_btn.magnificPopup().on('click', function(){    
+    
     
   //   if(second_click === false) {
   //     choose_prog_btn.on('click', function(e){
@@ -164,17 +165,26 @@ $(function(){
 
   //       $('.programms').css('display', 'block');
   //       $('.programms h3').html(programm_caption);
-  //       $('.programms-form').html(defineProgramm(user_activities));
+  //       $('.programms-form').html(defineProgramm(user_activities));        
         
   //     });
 
+      
+
   //     programm_confirm.on('click', function(){
-  //       $('.choise').css('display', 'block');
-  //       let choise_caption = `Уважаемый ${user_name}, вот список программ которые Вы выбрали ранее:`;
-  //       first_choise.html(choise_caption);
-  //       for(let i = 0; i < arr_activities.length; i++){
-  //         first_choise.html('<input type="checkbox" checked>' + arr_activities[i]);
-  //       }        
+  //       // $('.choise').css('display', 'block');
+  //       // let choise_caption = `Уважаемый ${user_name}, вот список программ которые Вы выбрали ранее:`;
+  //       // first_choise.html(choise_caption);
+  //       // for(let i = 0; i < arr_activities.length; i++){
+  //       //   first_choise.html('<input type="checkbox" checked>' + arr_activities[i]);
+  //       // }
+        
+  //      $('.form input:checkbox:checked, .form input:radio').prop('checked', false);
+  //      $('.programms').css('display', 'none');
+  //      $('.form input:text').val('');    
+
+  //       return $.magnificPopup.close();
+               
   //     });     
       
         

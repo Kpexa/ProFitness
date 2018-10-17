@@ -108,8 +108,10 @@ header {
 
 .menu {
   max-width: 100%;
-  position: relative;
-  background-color: #fff;
+  position: sticky;
+  top: 0;
+  background: #fff;
+  z-index: 30;
 
   .to(830px, {
     max-width: 100%;
@@ -540,19 +542,13 @@ header {
 .about-us {
   background: url(../images/dumbbel.png) no-repeat center; 
   background-size: cover;
-  height: 1029px;
+  height: 500px;
   .to(950px, {
-    height: 1000px;
-  });
-  .to(800px, {
-    height: 900px;
-  });
-  .to(700px, {
-    height: 850px;
+    height: 450px;
   });
   .to(576px, {
-    height: 900px;
-  });
+    height: 600px;
+  });  
 
   .about-us-caption {
     color: #fff;
@@ -620,15 +616,6 @@ header {
   }  
 }
 
-.video {
-  display: flex;
-  justify-content: center;
-
-  img {
-    align-self: center;
-  }
-}
-
 .about-us-items {
   .row-flex();
   justify-content: center;
@@ -665,7 +652,8 @@ header {
     .circle {
       padding: 25px 20px;
     }
-  }
+  }  
+ 
 }
 
 // -------------   COACHES   --------------
@@ -1354,31 +1342,31 @@ footer {
 
 // MODAL WINDOW
 
-.modal-window {
-  display: none;     
-}
+// .modal-window {
+//   display: none;     
+// }
 
-.modal {
-  max-width: 600px;
-  padding: 50px;
-  background-color: #fff;
-  margin: auto;
-  position: relative;
-}  
+// .modal {
+//   max-width: 600px;
+//   padding: 50px;
+//   background-color: #fff;
+//   margin: auto;
+//   position: relative;
+// }  
 
-.modal-caption {  
-  font-size: 30px;
-  font-weight: bold;  
-}
+// .modal-caption {  
+//   font-size: 30px;
+//   font-weight: bold;  
+// }
 
-.modal-text {
-  font-size: 25px; 
-}
+// .modal-text {
+//   font-size: 25px; 
+// }
 
-.programms {
-  display: none;
-}
+// .programms {
+//   display: none;
+// }
 
-.choise {
-  display: none;
-}
+// .choise {
+//   display: none;
+// }
