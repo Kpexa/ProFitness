@@ -69,11 +69,13 @@ $(function(){
     responsive:{
         0:{
             items:1,
-            nav:true
+            nav:true,
+            autoplay: false
         },
         600:{
             items:2,
-            nav:true
+            nav:true,
+            autoplay: false
         },
         1000:{
             items:3,
