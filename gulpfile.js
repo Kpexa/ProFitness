@@ -48,7 +48,7 @@ gulp.task('css', function(){
 });
 
 gulp.task('js', function(){
-    gulp.src(['./src/prejs/jquery-3.3.1.min.js', './src/prejs/jquery.magnific-popup.min.js', './src/prejs/owl.carousel.min.js', './src/prejs/scripts.js'])
+    gulp.src(['./src/prejs/jquery-3.3.1.min.js', './src/prejs/owl.carousel.min.js', './src/prejs/scripts.js'])
         .pipe(sourcemaps.init())
         .pipe(concat('scripts.js'))
         .pipe(babel({
