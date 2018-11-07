@@ -4,7 +4,7 @@ $(function(){
   let nav_height = parseInt($('.links').height());  
   let nav_btn = $('.logo');
   let nav_items = $('.nav-links .links');
-  let services_items = $('.services-item-1, .services-item-2');  
+  let services_items = $('.services-item-1, .services-item-2, .services-item-3, .services-item-4');  
 
   links.on('click', function(e){
 
